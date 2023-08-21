@@ -1,8 +1,10 @@
 <?php 
 
+    $paragraph = $_GET['paragraph'];
+    $censorWord = $_GET['censorship'];
+    $newParagraph = str_replace($censorWord, '***', $paragraph);
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +15,31 @@
         <title>PHP Badwords</title>
     </head>
     <body>
+        <main>
+    
+            <h1>
+                risultato
+            </h1>
 
-        <h1>
-            risultato
-        </h1>
+            <div>
+                <?php 
+                    echo 'Your paragraph: ', $paragraph;
+                    echo '<br>';
+                    echo 'paragraph length = ', strlen($paragraph);
 
-        
+                    echo '<br> ----------------- <br>';
+
+                    echo $newParagraph, '<br>', 'paragraph length = ', strlen($newParagraph);
+                ?>
+            </div>
+
+            <form action="index.php">
+                <button>
+                    Go back
+                </button>
+            </form>
+            
+        </main>
+
     </body>
 </html>

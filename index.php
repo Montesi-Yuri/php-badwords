@@ -16,20 +16,14 @@
     <body>
         <main>
 
-            <form method="get">
+            <h1>Censor 2000</h1>
+
+            <form action="risultato.php" method="get">
                 <textarea name="paragraph" id="" rows="4" cols="50"></textarea>
                 <br>
                 <input type="text" name="censorship" id="">
-                <button>Applica censura</button>
+                <button>Apply censorship</button>
             </form>
-
-            <div>
-                <?php 
-                    echo $paragraph;
-                    echo '<br>';
-                    echo $censorWord;
-                ?>
-            </div>
             
         </main>
         
